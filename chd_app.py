@@ -120,7 +120,35 @@ diabetes = st.radio("Has Diabetes?", [1, 0], format_func=lambda x: "Yes" if x ==
 totChol = st.number_input("Total Cholesterol", value=200.0)
 sysBP = st.number_input("Systolic BP", value=130.0)
 diaBP = st.number_input("Diastolic BP", value=80.0)
-BMI = st.number_input("BMI", value=25.0)
+st.markdown("### 🧮 Calculate your BMI")
+
+weight = st.number_input("Enter your weight (in kg)", min_value=10.0, max_value=300.0, value=70.0)
+height_cm = st.number_input("Enter your height (in cm)", min_value=50.0, max_value=250.0, value=170.0)
+
+st.markdown("### 🧮 Calculate your BMI")
+
+weight = st.number_input("Enter your weight (in kg)", min_value=10.0, max_value=300.0, value=70.0)
+height_cm = st.number_input("Enter your height (in cm)", min_value=50.0, max_value=250.0, value=170.0)
+
+# Calculate BMI
+height_m = height_cm / 100
+calculated_bmi = round(weight / (height_m ** 2), 2)
+
+st.success(f"✅ Your calculated BMI is: {calculated_bmi}")
+
+# Show BMI category
+if calculated_bmi < 18.5:
+    st.warning("🟡 Underweight")
+elif 18.5 <= calculated_bmi < 25:
+    st.success("🟢 Normal weight")
+elif 25 <= calculated_bmi < 30:
+    st.warning("🟠 Overweight")
+else:
+    st.error("🔴 Obese")
+
+# Use calculated BMI in the prediction model
+BMI = calculated_bmi
+
 heartRate = st.number_input("Heart Rate", value=72.0)
 glucose = st.number_input("Glucose Level", value=100.0)
 
