@@ -5,8 +5,8 @@ import joblib
 import os
 
 # ====== Load model and scaler ======
-model_path = r"E:\flask_app\CHD_Streamlit_App\logistic_model.pkl"
-scaler_path = r"E:\flask_app\CHD_Streamlit_App\scaler.pkl"
+model_path = "logistic_model.pkl"
+scaler_path = "scaler.pkl"
 
 model, scaler = None, None
 
