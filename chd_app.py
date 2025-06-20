@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import joblib
 import os
-st.write("📁 Files visible to Streamlit:", os.listdir())
+
 # ====== Load model and scaler ======
 model_path = "logistic_model.pkl"
 scaler_path = "scaler.pkl"
