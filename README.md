@@ -6,6 +6,7 @@ Built by **Aarish Ali** using:
 - 🧠 Logistic Regression (Scikit-learn)
 - 🗃️ Model trained in **Google Colab**
 - 🖥️ Frontend using **Streamlit**
+- https://coronary-heart-disease-prediction-yxvdo24jbiywhrnmzxxnqd.streamlit.app/ 
 
 ---
 
